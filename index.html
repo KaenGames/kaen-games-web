@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100609">
+<meta name="description" content="KAEN GAMES — Independent games made with passion.">
+<title>KAEN GAMES | Indie Game Studio</title>
+<style>
+:root{--bg:#100609;--red:#ef334b;--text:#fff4f3;--muted:#bca5aa}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:10;background:#100609eF;border-bottom:1px solid #ffffff1c;backdrop-filter:blur(12px)}
+nav{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 24px}
+.logo{font-weight:900;letter-spacing:3px;font-size:20px}.logo span{color:var(--red)}
+.links{display:flex;gap:22px;font-size:13px;flex-wrap:wrap}
+.links a:hover{color:var(--red)}
+.hero{min-height:75vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:90px 24px;background:radial-gradient(ellipse at 50% 40%,#681322 0%,#260910 38%,#100609 75%)}
+.hero-inner{max-width:900px}
+.fox{font-size:65px;margin-bottom:18px}
+.eyebrow{color:#ff8997;letter-spacing:5px;font-size:12px;font-weight:bold}
+h1{font-size:clamp(55px,10vw,130px);line-height:1;margin:20px 0;letter-spacing:5px;text-shadow:0 8px 40px #0009}
+.hero p{font-size:clamp(17px,2.5vw,23px);color:#e9cbd0}
+.btn{display:inline-block;margin-top:25px;background:var(--red);padding:15px 28px;border-radius:5px;font-weight:bold;transition:.2s}
+.btn:hover{background:#ff6072;transform:translateY(-2px)}
+section{max-width:1150px;margin:auto;padding:85px 24px}
+h2{font-size:clamp(30px,5vw,46px);margin:0 0 12px}
+.subtitle{color:var(--muted);line-height:1.7;margin-bottom:32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.game{background:linear-gradient(145deg,#301019,#180b10);border:1px solid #66303b;border-radius:12px;overflow:hidden;transition:.25s}
+.game:hover{transform:translateY(-5px);border-color:var(--red)}
+.art{height:160px;display:flex;align-items:center;justify-content:center;font-size:58px;background:radial-gradient(circle,#672232,#260e15)}
+.game-body{padding:24px}
+.game h3{font-size:23px;margin:0 0 12px}
+.game p{color:var(--muted);font-size:14px;line-height:1.65}
+.tag{display:inline-block;color:#ff9ca8;border:1px solid #8a3a49;border-radius:30px;font-size:11px;padding:7px 11px;margin-top:12px}
+.about{background:#1a0b10;border-top:1px solid #ffffff13;border-bottom:1px solid #ffffff13}
+.about-inner{max-width:1100px;margin:auto;padding:75px 24px}
+.about p{color:var(--muted);max-width:720px;line-height:1.9}
+.socials{display:flex;flex-wrap:wrap;gap:14px}
+.socials a{border:1px solid #85414e;padding:12px 20px;border-radius:6px}
+.socials a:hover{background:#752030}
+footer{text-align:center;border-top:1px solid #ffffff20;padding:30px 15px;color:var(--muted);font-size:13px}
+@media(max-width:600px){nav{align-items:flex-start;flex-direction:column}.links{gap:12px}.hero{min-height:65vh}section{padding:60px 20px}}
+</style>
+</head>
+<body>
+<header><nav><a class="logo" href="#">KAEN <span>GAMES</span></a><div class="links"><a href="#games">OUR GAMES</a><a href="#about">ABOUT</a><a href="#community">COMMUNITY</a></div></nav></header>
+<main>
+<div class="hero"><div class="hero-inner"><div class="fox">🦊</div><div class="eyebrow">INDEPENDENT GAME STUDIO</div><h1>KAEN GAMES</h1><p>Making dreams and games we would have loved to play.</p><a class="btn" href="#games">EXPLORE OUR GAMES ↓</a></div></div>
+<section id="games"><div class="eyebrow">OUR WORLDS</div><h2>Games & Projects</h2><p class="subtitle">Different worlds. Different stories. One passion for games.</p><div class="grid">
+<article class="game"><div class="art">🌸</div><div class="game-body"><h3>That Day — 1967</h3><p>Nine friends. One unforgettable day. A choice that changes everything.</p><span class="tag">IN DEVELOPMENT</span></div></article>
+<article class="game"><div class="art">🧪</div><div class="game-body"><h3>Tachyon After Story</h3><p>A fan-made interactive experience featuring Agnes Tachyon.</p><span class="tag">UNOFFICIAL FAN PROJECT</span></div></article>
+<article class="game"><div class="art">🐾</div><div class="game-body"><h3>Tachyon Virtual Pet</h3><p>A little desktop companion with a laboratory of her own.</p><span class="tag">UNOFFICIAL FAN PROJECT</span></div></article>
+<article class="game"><div class="art">⚽</div><div class="game-body"><h3>Football Project</h3><p>Build your team, develop your players and guide them to victory.</p><span class="tag">IN DEVELOPMENT</span></div></article>
+<article class="game"><div class="art">🥊</div><div class="game-body"><h3>Fighting Game Project</h3><p>Fast-paced battles, team fights and tournaments.</p><span class="tag">IN DEVELOPMENT</span></div></article>
+</div></section>
+<div class="about" id="about"><div class="about-inner"><div class="eyebrow">WHO WE ARE</div><h2>Built with passion.</h2><p>KAEN GAMES is an independent game development studio driven by one idea: creating the games we always wanted to play. From emotional stories to energetic battles, every project starts with a dream.</p></div></div>
+<section id="community"><div class="eyebrow">JOIN THE JOURNEY</div><h2>Follow KAEN GAMES</h2><p class="subtitle">Development updates, new projects, behind-the-scenes content and more.</p><div class="socials"><a href="https://www.youtube.com/@KaenGames01" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://x.com/KaenGames" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a><a href="https://www.instagram.com/kaen.games/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></section>
+</main>
+<footer>© 2026 KAEN GAMES · Independent Game Studio<br><small>Tachyon fan projects are unofficial and are not affiliated with or endorsed by Cygames.</small></footer>
+</body>
+</html>

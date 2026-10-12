@@ -1,65 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#100609">
-<meta name="description" content="KAEN GAMES — Independent games made with passion.">
-<title>KAEN GAMES | Indie Game Studio</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0c0508">
+<meta name="description" content="KAEN GAMES — Making dreams and games we would have loved to play.">
+<title>KAEN GAMES — Independent Game Studio</title>
 <style>
-:root{--bg:#100609;--red:#ef334b;--text:#fff4f3;--muted:#bca5aa}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
-a{color:inherit;text-decoration:none}
-header{position:sticky;top:0;z-index:10;background:#100609eF;border-bottom:1px solid #ffffff1c;backdrop-filter:blur(12px)}
-nav{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 24px}
-.logo{font-weight:900;letter-spacing:3px;font-size:20px}.logo span{color:var(--red)}
-.links{display:flex;gap:22px;font-size:13px;flex-wrap:wrap}
-.links a:hover{color:var(--red)}
-.hero{min-height:75vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:90px 24px;background:radial-gradient(ellipse at 50% 40%,#681322 0%,#260910 38%,#100609 75%)}
-.hero-inner{max-width:900px}
-.fox{font-size:65px;margin-bottom:18px}
-.eyebrow{color:#ff8997;letter-spacing:5px;font-size:12px;font-weight:bold}
-h1{font-size:clamp(55px,10vw,130px);line-height:1;margin:20px 0;letter-spacing:5px;text-shadow:0 8px 40px #0009}
-.hero p{font-size:clamp(17px,2.5vw,23px);color:#e9cbd0}
-.btn{display:inline-block;margin-top:25px;background:var(--red);padding:15px 28px;border-radius:5px;font-weight:bold;transition:.2s}
-.btn:hover{background:#ff6072;transform:translateY(-2px)}
-section{max-width:1150px;margin:auto;padding:85px 24px}
-h2{font-size:clamp(30px,5vw,46px);margin:0 0 12px}
-.subtitle{color:var(--muted);line-height:1.7;margin-bottom:32px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.game{background:linear-gradient(145deg,#301019,#180b10);border:1px solid #66303b;border-radius:12px;overflow:hidden;transition:.25s}
-.game:hover{transform:translateY(-5px);border-color:var(--red)}
-.art{height:160px;display:flex;align-items:center;justify-content:center;font-size:58px;background:radial-gradient(circle,#672232,#260e15)}
-.game-body{padding:24px}
-.game h3{font-size:23px;margin:0 0 12px}
-.game p{color:var(--muted);font-size:14px;line-height:1.65}
-.tag{display:inline-block;color:#ff9ca8;border:1px solid #8a3a49;border-radius:30px;font-size:11px;padding:7px 11px;margin-top:12px}
-.about{background:#1a0b10;border-top:1px solid #ffffff13;border-bottom:1px solid #ffffff13}
-.about-inner{max-width:1100px;margin:auto;padding:75px 24px}
-.about p{color:var(--muted);max-width:720px;line-height:1.9}
-.socials{display:flex;flex-wrap:wrap;gap:14px}
-.socials a{border:1px solid #85414e;padding:12px 20px;border-radius:6px}
-.socials a:hover{background:#752030}
-footer{text-align:center;border-top:1px solid #ffffff20;padding:30px 15px;color:var(--muted);font-size:13px}
-@media(max-width:600px){nav{align-items:flex-start;flex-direction:column}.links{gap:12px}.hero{min-height:65vh}section{padding:60px 20px}}
+:root{color-scheme:dark;--red:#ff304a;--ink:#0c0508;--muted:#d2b8bf}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:white;font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid white;outline-offset:4px}header{position:absolute;z-index:5;top:0;left:0;right:0;border-bottom:1px solid #ffffff28;background:#090407b8;backdrop-filter:blur(12px)}nav{max-width:1240px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:19px 25px}.brand{font-weight:900;letter-spacing:.18em;font-size:20px}.brand span{color:var(--red)}.navlinks{display:flex;gap:27px;font-size:12px;letter-spacing:.12em;font-weight:700}.navlinks a:hover{color:#ff6578}.hero{position:relative;min-height:100svh;display:flex;align-items:center;isolation:isolate;overflow:hidden;background:#1b080d}.hero:before{content:"";position:absolute;inset:0;z-index:-2;background-image:linear-gradient(90deg,rgba(7,3,6,.91) 0%,rgba(13,3,8,.65) 43%,rgba(13,3,8,.08) 100%),linear-gradient(0deg,#0c0508 0%,transparent 27%),url('images/Santuario%20bajo%20la%20luna%20carmes%C3%AD.png');background-position:center;background-size:cover;animation:reveal 1.5s ease both}.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 18% 65%,#9c0b233d,transparent 48%);pointer-events:none}.hero-content{max-width:1240px;width:100%;margin:auto;padding:150px 25px 110px;position:relative;z-index:2}.eyebrow{font-size:12px;letter-spacing:.4em;font-weight:800;color:#ff8899}.hero h1{font-size:clamp(60px,11vw,145px);letter-spacing:-.07em;line-height:.87;margin:25px 0 25px;font-weight:900;text-shadow:0 12px 35px #000c}.hero h1 span{display:block;color:var(--red);font-style:italic;font-size:.75em;margin-left:1.2em}.japanese{font-size:23px;letter-spacing:.2em;margin:25px 0 10px}.tagline{font-size:clamp(14px,2vw,19px);color:#f0d9df;letter-spacing:.09em;line-height:1.6;max-width:510px}.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:35px}.btn{display:inline-block;border:1px solid #ff4059;background:#ed1737;padding:16px 24px;font-weight:800;font-size:13px;letter-spacing:.07em;box-shadow:0 0 30px #ff123d65;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-3px);box-shadow:0 0 42px #ff123d9c}.btn.secondary{background:#0b0508b9;border-color:#ffffff80;box-shadow:none}.ember-field{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}.ember{position:absolute;bottom:-20px;left:var(--x);width:var(--size);height:var(--size);border-radius:50%;background:#ff6941;box-shadow:0 0 13px 3px #f22a16b0;opacity:0;animation:float-up var(--dur) linear infinite;animation-delay:var(--delay)}@keyframes float-up{0%{transform:translate3d(0,0,0);opacity:0}12%{opacity:.8}85%{opacity:.65}100%{transform:translate3d(var(--drift),-110vh,0);opacity:0}}@keyframes reveal{from{transform:scale(1.06);opacity:.45}to{transform:scale(1);opacity:1}}main{background:linear-gradient(#0c0508,#1b080f 65%,#0c0508)}section{max-width:1240px;margin:auto;padding:95px 25px}.section-kicker{font-size:12px;letter-spacing:.3em;color:var(--red);font-weight:800}h2{font-size:clamp(33px,5vw,54px);margin:12px 0 18px}.lead{color:var(--muted);line-height:1.7;max-width:720px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:19px;margin-top:36px}.game{background:#16090e;border:1px solid #79303b;border-radius:8px;overflow:hidden;transition:transform .25s,border-color .25s}.game:hover{transform:translateY(-7px);border-color:var(--red)}.art{height:175px;display:grid;place-items:center;font-size:62px;background:radial-gradient(circle at 50% 50%,#8d263b,#230a13 70%);border-bottom:1px solid #7e2c3b}.game:nth-child(2) .art{background:radial-gradient(circle,#48315f,#180b19 75%)}.game:nth-child(3) .art{background:radial-gradient(circle,#214b65,#0c1524 75%)}.game:nth-child(4) .art{background:radial-gradient(circle,#33506e,#0c1321 75%)}.game:nth-child(5) .art{background:radial-gradient(circle,#8d2432,#20090e 75%)}.game-body{padding:23px}.game h3{margin:0 0 10px;font-size:20px}.game p{color:var(--muted);font-size:14px;line-height:1.6;min-height:66px}.pill{display:inline-block;border:1px solid #c83c52;color:#ff8798;border-radius:20px;padding:7px 10px;font-size:10px;font-weight:800;letter-spacing:.06em}.pill.fan{border-color:#8c5bc0;color:#d5a9ff}.about{border-block:1px solid #7c263944;background:#1c0b12}.socials{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}.socials a{padding:13px 21px;border:1px solid #b24455;border-radius:5px;font-weight:700;transition:background .2s}.socials a:hover{background:#9b2338}footer{text-align:center;padding:35px 20px;border-top:1px solid #ffffff26;color:#bba0a7;font-size:13px;line-height:1.8}@media(max-width:650px){nav{align-items:flex-start;flex-direction:column}.navlinks{flex-wrap:wrap;gap:15px;font-size:11px}.hero-content{padding-top:200px}.hero:before{background-position:60% center;background-image:linear-gradient(90deg,#080308dd,#0d03088c),linear-gradient(0deg,#0c0508,transparent 35%),url('images/Santuario%20bajo%20la%20luna%20carmes%C3%AD.png')}.hero h1 span{margin-left:.4em}.japanese{font-size:18px}section{padding:65px 22px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<header><nav><a class="logo" href="#">KAEN <span>GAMES</span></a><div class="links"><a href="#games">OUR GAMES</a><a href="#about">ABOUT</a><a href="#community">COMMUNITY</a></div></nav></header>
-<main>
-<div class="hero"><div class="hero-inner"><div class="fox">🦊</div><div class="eyebrow">INDEPENDENT GAME STUDIO</div><h1>KAEN GAMES</h1><p>Making dreams and games we would have loved to play.</p><a class="btn" href="#games">EXPLORE OUR GAMES ↓</a></div></div>
-<section id="games"><div class="eyebrow">OUR WORLDS</div><h2>Games & Projects</h2><p class="subtitle">Different worlds. Different stories. One passion for games.</p><div class="grid">
-<article class="game"><div class="art">🌸</div><div class="game-body"><h3>That Day — 1967</h3><p>Nine friends. One unforgettable day. A choice that changes everything.</p><span class="tag">IN DEVELOPMENT</span></div></article>
-<article class="game"><div class="art">🧪</div><div class="game-body"><h3>Tachyon After Story</h3><p>A fan-made interactive experience featuring Agnes Tachyon.</p><span class="tag">UNOFFICIAL FAN PROJECT</span></div></article>
-<article class="game"><div class="art">🐾</div><div class="game-body"><h3>Tachyon Virtual Pet</h3><p>A little desktop companion with a laboratory of her own.</p><span class="tag">UNOFFICIAL FAN PROJECT</span></div></article>
-<article class="game"><div class="art">⚽</div><div class="game-body"><h3>Football Project</h3><p>Build your team, develop your players and guide them to victory.</p><span class="tag">IN DEVELOPMENT</span></div></article>
-<article class="game"><div class="art">🥊</div><div class="game-body"><h3>Fighting Game Project</h3><p>Fast-paced battles, team fights and tournaments.</p><span class="tag">IN DEVELOPMENT</span></div></article>
-</div></section>
-<div class="about" id="about"><div class="about-inner"><div class="eyebrow">WHO WE ARE</div><h2>Built with passion.</h2><p>KAEN GAMES is an independent game development studio driven by one idea: creating the games we always wanted to play. From emotional stories to energetic battles, every project starts with a dream.</p></div></div>
-<section id="community"><div class="eyebrow">JOIN THE JOURNEY</div><h2>Follow KAEN GAMES</h2><p class="subtitle">Development updates, new projects, behind-the-scenes content and more.</p><div class="socials"><a href="https://www.youtube.com/@KaenGames01" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://x.com/KaenGames" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a><a href="https://www.instagram.com/kaen.games/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></section>
-</main>
-<footer>© 2026 KAEN GAMES · Independent Game Studio<br><small>Tachyon fan projects are unofficial and are not affiliated with or endorsed by Cygames.</small></footer>
+<header><nav><a class="brand" href="#home">KAEN <span>GAMES</span></a><div class="navlinks"><a href="#home">HOME</a><a href="#games">OUR GAMES</a><a href="#about">ABOUT</a><a href="#community">COMMUNITY</a></div></nav></header>
+<div class="hero" id="home"><div class="ember-field" aria-hidden="true" id="embers"></div><div class="hero-content"><div class="eyebrow">INDEPENDENT GAME STUDIO</div><h1>KAEN <span>GAMES</span></h1><div class="japanese" lang="ja">夢を、ゲームに。</div><p class="tagline">Making dreams and games we would have loved to play.</p><div class="buttons"><a class="btn" href="#games">EXPLORE OUR GAMES →</a><a class="btn secondary" href="#community">FOLLOW OUR JOURNEY ↗</a></div></div></div>
+<main><section id="games"><div class="section-kicker">OUR WORLDS</div><h2>GAMES & PROJECTS</h2><p class="lead">Different worlds. Different stories. One passion for games.</p><div class="grid">
+<article class="game"><div class="art" aria-hidden="true">🌸</div><div class="game-body"><h3>That Day — 1967</h3><p>Nine friends. One unforgettable day. A choice that changes everything.</p><span class="pill">IN DEVELOPMENT</span></div></article>
+<article class="game"><div class="art" aria-hidden="true">🧪</div><div class="game-body"><h3>Tachyon After Story</h3><p>An interactive fan-made experience featuring Agnes Tachyon.</p><span class="pill fan">UNOFFICIAL FAN PROJECT</span></div></article>
+<article class="game"><div class="art" aria-hidden="true">🐾</div><div class="game-body"><h3>Tachyon Virtual Pet</h3><p>A desktop companion with a laboratory of her own.</p><span class="pill fan">UNOFFICIAL FAN PROJECT</span></div></article>
+<article class="game"><div class="art" aria-hidden="true">⚽</div><div class="game-body"><h3>Football Project</h3><p>Train your players and guide your team to victory.</p><span class="pill">IN DEVELOPMENT</span></div></article>
+<article class="game"><div class="art" aria-hidden="true">🥊</div><div class="game-body"><h3>Fighting Game Project</h3><p>Fast-paced battles, team fights and tournaments.</p><span class="pill">IN DEVELOPMENT</span></div></article>
+</div></section><div class="about" id="about"><section><div class="section-kicker">WHO WE ARE</div><h2>BUILT WITH PASSION.</h2><p class="lead">KAEN GAMES is an independent game development studio driven by one idea: creating the games we always wanted to play. From emotional stories to energetic battles, every project starts with a dream.</p></section></div><section id="community"><div class="section-kicker">JOIN THE JOURNEY</div><h2>FOLLOW KAEN GAMES</h2><p class="lead">Development updates, behind-the-scenes content and new worlds to explore.</p><div class="socials"><a href="https://www.youtube.com/@KaenGames01" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://x.com/KaenGames" target="_blank" rel="noopener noreferrer">X / Twitter ↗</a><a href="https://www.instagram.com/kaen.games/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></section></main><footer>© 2026 KAEN GAMES · Independent Game Studio<br>Tachyon fan projects are unofficial and not affiliated with or endorsed by Cygames.</footer>
+<script>
+const field=document.getElementById('embers');if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){for(let i=0;i<35;i++){const ember=document.createElement('i');ember.className='ember';ember.style.setProperty('--x',Math.random()*100+'%');ember.style.setProperty('--size',(2+Math.random()*4)+'px');ember.style.setProperty('--dur',(7+Math.random()*10)+'s');ember.style.setProperty('--delay',(-Math.random()*18)+'s');ember.style.setProperty('--drift',(Math.random()*240-120)+'px');field.appendChild(ember)}}
+</script>
 </body>
 </html>

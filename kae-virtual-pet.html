@@ -1,56 +1,55 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0c0508">
-<meta name="description" content="Kae Virtual Pet — a mischievous desktop companion from KAEN GAMES.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#120811">
+<meta name="description" content="Meet Kae: a cheeky little fox with her own cozy home who loves to explore your Windows desktop. Kae Virtual Pet from KAEN GAMES.">
+<meta property="og:title" content="Kae Virtual Pet | KAEN GAMES">
+<meta property="og:description" content="Konkon! Your desktop belongs to Kae now. >:3">
+<meta property="og:image" content="kae-media/kae-home.webp">
 <title>Kae Virtual Pet — KAEN GAMES</title>
 <style>
-:root{color-scheme:dark;--red:#ff4059;--ink:#0c0508;--muted:#e3bfca}
+:root{color-scheme:dark;--ink:#110912;--panel:#231427;--edge:#6d3855;--red:#ff506d;--pink:#ff95ab;--cream:#fff1f3;--muted:#d4b6c7;--shadow:#030104}
 *{box-sizing:border-box}
-body{margin:0;min-height:100svh;background:radial-gradient(circle at 75% 25%,#75203755,transparent 50%),linear-gradient(145deg,#0b0509,#230a13 65%,#0b0509);color:white;font-family:Arial,Helvetica,sans-serif}
-a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid white;outline-offset:4px}
-header{border-bottom:1px solid #ffffff25;background:#090407c9;padding:18px max(22px,calc((100vw - 1120px)/2))}
-header a{font-weight:900;letter-spacing:.13em}header span{color:var(--red)}
-main{max-width:1120px;margin:auto;padding:65px 24px 95px}
-.back{color:#ff9cad;font-weight:bold;font-size:13px}
-.layout{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:42px;margin-top:45px}
-.kicker{color:#ff8399;letter-spacing:.2em;font-weight:800;font-size:12px}
-h1{font-size:clamp(46px,7vw,86px);line-height:.98;margin:20px 0}h1 span{color:var(--red)}
-p{color:var(--muted);line-height:1.8;font-size:17px}
-.pill{display:inline-block;border:1px solid #c83c52;border-radius:50px;color:#ff9aab;padding:9px 14px;font-size:11px;letter-spacing:.06em;font-weight:800;margin-top:18px}
-.stage{min-height:460px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:22px;border:1px solid #a9395077;border-radius:22px;background:radial-gradient(circle at 50% 65%,#9e224237,transparent 60%),#170a11;overflow:hidden;box-shadow:0 16px 50px #0006}
-.speech{max-width:88%;padding:19px 22px;border:2px solid #ff7991;border-radius:20px;background:#fff8fb;color:#4e0820;text-align:center;font-weight:900;font-size:clamp(17px,2.3vw,22px);line-height:1.45;box-shadow:0 8px 30px #ff415138;position:relative;animation:pop .5s .15s both}
-.speech::after{content:'';position:absolute;bottom:-13px;left:50%;width:20px;height:20px;background:#fff8fb;border-right:2px solid #ff7991;border-bottom:2px solid #ff7991;transform:translateX(-50%) rotate(45deg)}
-.kae{width:min(72%,310px);height:270px;object-fit:contain;filter:drop-shadow(0 12px 25px #000b);animation:bob 3.2s ease-in-out infinite}
-.note{font-size:12px;color:#c59dac;text-align:center;padding:0 15px}
-footer{text-align:center;color:#ab8792;font-size:12px;padding:25px;border-top:1px solid #ffffff20}
-@keyframes pop{from{opacity:0;transform:translateY(18px) scale(.9)}to{opacity:1;transform:translateY(0) scale(1)}}
-@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
-@media(max-width:760px){main{padding:40px 20px 75px}.layout{grid-template-columns:1fr;gap:28px}.stage{min-height:410px}}
-@media(prefers-reduced-motion:reduce){.speech,.kae{animation:none}}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--cream);background:radial-gradient(ellipse 80% 45% at 75% 0%,#a728513c,transparent 70%),linear-gradient(160deg,#160a15 0%,#09060c 70%);overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #fff;outline-offset:4px}
+header{position:sticky;top:0;z-index:50;background:#130914ea;border-bottom:1px solid #f47b9540;backdrop-filter:blur(16px)}.nav{max-width:1200px;margin:auto;min-height:70px;display:flex;justify-content:space-between;align-items:center;gap:22px;padding:12px 24px}.logo{font-size:19px;letter-spacing:.18em;font-weight:950;white-space:nowrap}.logo span{color:var(--red)}.links{display:flex;align-items:center;gap:24px;font-size:12px;font-weight:850;letter-spacing:.08em}.links a:hover{color:var(--pink)}
+.container{max-width:1200px;margin:auto;padding:0 24px}.eyebrow{color:var(--pink);letter-spacing:.22em;font-size:11px;font-weight:850;text-transform:uppercase}.hero{position:relative;isolation:isolate;overflow:hidden;padding:78px 0 72px}.hero:before{content:'';position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse 50% 50% at 70% 50%,#de456a26,transparent 90%);pointer-events:none}.hero-grid{display:grid;grid-template-columns:minmax(320px,1fr) minmax(400px,1.18fr);align-items:center;gap:clamp(30px,5vw,80px)}.hero h1{font-size:clamp(56px,8vw,105px);line-height:.87;margin:21px 0 25px;font-weight:950;letter-spacing:-.08em;text-shadow:0 10px 30px #0006}.hero h1 span{display:block;color:var(--red);font-size:.63em;letter-spacing:-.055em;margin-top:12px}.hero p{color:var(--muted);max-width:520px;font-size:17px;line-height:1.8}.status{display:inline-flex;align-items:center;gap:8px;border:1px solid #ff779a8a;color:#ffb7c6;background:#ff2c5a13;border-radius:100px;padding:9px 15px;font-size:11px;letter-spacing:.08em;font-weight:900}.status::before{content:'';width:7px;height:7px;border-radius:50%;background:#ff667e}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.cta{border:1px solid #ff6079;background:#e42c4f;color:white;border-radius:5px;padding:15px 21px;font-weight:850;font-size:13px;letter-spacing:.04em;transition:transform .15s,background .15s}.cta:hover{transform:translateY(-2px);background:#f24160}.cta.alt{background:transparent;border-color:#d09bac}.cta.alt:hover{background:#ffffff11}.available-note{font-size:12px;color:#bfa3b1;margin-top:14px}.hero-visual{position:relative;min-width:0}.hero-frame{position:relative;border:1px solid #f16d8f8c;border-radius:17px;overflow:hidden;background:#140c1a;box-shadow:0 23px 70px #0009,0 0 60px #f52e5027;transform:rotate(1deg)}.hero-frame:before{content:'';display:block;height:7px;background:linear-gradient(90deg,#a01c45,#ef597e,#ffc0cb,#78112e)}.hero-frame img{width:100%;display:block}.frame-label{padding:10px 15px;background:#1d0e1d;color:#f8ced7;font-size:12px;display:flex;justify-content:space-between;gap:12px}.kae-speech{position:absolute;right:0;top:-35px;max-width:340px;background:#fff3f5;color:#61112e;border:2px solid #fc6989;border-radius:20px 20px 6px 20px;padding:14px 19px;font-weight:950;text-align:center;line-height:1.3;box-shadow:0 13px 36px #0008;animation:appear .6s ease both;z-index:2}.mascot{position:absolute;width:138px;height:145px;object-fit:contain;bottom:-44px;right:-24px;filter:drop-shadow(0 8px 16px #000b);animation:float 3.5s ease-in-out infinite;z-index:2}
+@keyframes appear{from{opacity:0;transform:translateY(12px) scale(.92)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes float{50%{transform:translateY(-8px)}}
+.section{padding:82px 0;border-top:1px solid #ff6a8730}.section h2{font-size:clamp(34px,5vw,55px);line-height:1.1;letter-spacing:-.045em;margin:12px 0 15px}.lead{color:var(--muted);max-width:720px;line-height:1.75}.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:31px}.feature{border:1px solid #94476066;background:linear-gradient(160deg,#2d1728,#180e1a);padding:25px;border-radius:13px}.feature .symbol{font-size:28px}.feature h3{margin:12px 0 7px;font-size:19px}.feature p{color:var(--muted);font-size:14px;margin:0;line-height:1.7}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:32px}.shot{margin:0;border:1px solid #91506c90;border-radius:12px;overflow:hidden;background:#211322;box-shadow:0 9px 24px #0004}.shot img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}.shot figcaption{padding:15px 18px;color:#f4d2da;font-weight:750;font-size:13px}.shot figcaption small{display:block;color:#bfa0b1;font-size:12px;font-weight:400;margin-top:3px}
+.film-wrap{border-radius:15px;border:1px solid #bb607e8c;overflow:hidden;background:#08060a;box-shadow:0 15px 40px #0008;margin-top:28px}.film-wrap video{width:100%;display:block;max-height:650px;background:#08060a;object-fit:contain}.film-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:14px 19px;font-size:12px;color:#cfaeb9;background:#21121f}.film-bottom strong{color:#ff9aac}
+.download{display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;background:linear-gradient(120deg,#32162a,#21111e);border:1px solid #f35b8099;padding:32px;border-radius:17px;margin-top:26px}.download h3{font-size:28px;line-height:1.2;margin:0 0 9px}.download p{color:var(--muted);margin:0}.platform{display:inline-block;margin-top:11px;color:#ffacc0;font-weight:800;font-size:12px}.download .cta{white-space:nowrap}.download .cta[aria-disabled=true]{opacity:.7;cursor:not-allowed;background:#75324b;border-color:#ac5973}.download .cta[aria-disabled=true]:hover{transform:none}
+.footer{border-top:1px solid #ff6a8730;padding:32px 22px;text-align:center;color:#b38fa2;font-size:12px}.footer a{color:#ffd4de}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero{padding-top:56px}.hero-visual{max-width:690px;width:100%;margin:20px auto 25px}.mascot{right:0}.kae-speech{right:7px}.features{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.nav{padding:14px 17px}.logo{font-size:16px}.links{gap:13px;font-size:10px}.container{padding:0 17px}.hero{padding:44px 0 56px}.hero h1{font-size:clamp(53px,13vw,77px)}.kae-speech{position:relative;right:auto;top:auto;margin:0 0 10px auto;max-width:85%;font-size:13px}.mascot{width:95px;height:100px;bottom:-28px;right:0}.section{padding:60px 0}.features,.gallery{grid-template-columns:1fr}.feature{padding:20px}.download{grid-template-columns:1fr;padding:24px}.download .cta{width:100%;text-align:center}.shot img{aspect-ratio:1.7}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.kae-speech,.mascot{animation:none}.cta{transition:none}}
 </style>
 </head>
 <body>
-<header><a href="index.html">KAEN <span>GAMES</span></a></header>
+<header><nav class="nav"><a class="logo" href="index.html#home" aria-label="Kaen Games homepage">KAEN <span>GAMES</span></a><div class="links"><a href="index.html#games">ALL GAMES</a><a href="#gallery">SCREENSHOTS</a><a href="#download">GET THE GAME</a></div></nav></header>
 <main>
-<a class="back" href="index.html#games">← BACK TO OUR GAMES</a>
-<div class="layout">
-<div>
-<div class="kicker">MEET YOUR DESKTOP COMPANION</div>
-<h1>KAE <span>VIRTUAL PET</span></h1>
-<p>Meet Kae, the mischievous official mascot of KAEN GAMES. A playful virtual companion who loves attention, little pranks and making herself at home on your desktop.</p>
-<p>Say hello to Kae — but keep an eye on your computer. 🦊</p>
-<div class="pill">GAME COMPLETE · ORIGINAL KAEN GAMES PROJECT</div>
-</div>
-<div class="stage" aria-label="Kae greets visitors">
-<div class="speech" role="status" lang="es">¡Konkon! ¡Ahora te robaré el ordenador! &gt;:3</div>
-<img class="kae" src="kae/kae.png" alt="Kae, the official fox mascot of KAEN GAMES">
-<div class="note">Kae is plotting something…</div>
-</div>
-</div>
+<section class="hero"><div class="container hero-grid">
+<div><div class="eyebrow">KAEN GAMES PRESENTS · YOUR NEW DESKTOP COMPANION</div><h1>KAE <span>VIRTUAL PET</span></h1><p>Meet Kae, our mischievous little kitsune with a big personality and an even bigger appetite for attention. Take care of her in her cozy home… then let her turn your Windows desktop into her playground.</p><div class="status">GAME COMPLETE · WINDOWS</div><div class="actions"><a class="cta" href="#download">EXPLORE THE GAME ↓</a><a class="cta alt" href="#gameplay">WATCH GAMEPLAY ↗</a></div><div class="available-note">Available in Spanish and English · Developed by KAEN GAMES</div></div>
+<div class="hero-visual"><div class="kae-speech" role="status" lang="es">¡Konkon! ¡Ahora te robaré el ordenador! &gt;:3</div><div class="hero-frame"><img src="kae-media/kae-home.webp" alt="Kae greets the player inside her cozy pixel-art home" fetchpriority="high"><div class="frame-label"><span>KAE / MY HOME</span><span>WINDOWS PC</span></div></div><img class="mascot" src="kae/kae.png" alt="Kae, the official mascot of KAEN GAMES" onerror="this.hidden=true"></div>
+</div></section>
+<section class="section" id="features"><div class="container"><div class="eyebrow">SMALL FOX · BIG PERSONALITY</div><h2>She has plans for your PC.</h2><p class="lead">Kae is playful, cheeky, affectionate and just a little demanding. Her home is only the beginning — she's always ready to explore, ask for affection, and interrupt your day with a very important announcement.</p><div class="features">
+<article class="feature"><div class="symbol">🏠</div><h3>Her cozy home</h3><p>Spend time with Kae in her own room, complete with charming pixel-art furniture and her favorite place to nap.</p></article>
+<article class="feature"><div class="symbol">🦊</div><h3>A desktop companion</h3><p>Let Kae leave her home and wander around your Windows desktop, with movement and action controls.</p></article>
+<article class="feature"><div class="symbol">💬</div><h3>Konkon!</h3><p>Get to know her cheeky personality through little text bubbles, greetings and playful requests.</p></article>
+<article class="feature"><div class="symbol">💗</div><h3>Give her attention</h3><p>Look after her needs, share affection and spend time with your very demanding little companion.</p></article>
+<article class="feature"><div class="symbol">💤</div><h3>Rest & play</h3><p>Watch her sleep, walk around or react to your interactions — Kae always has something to do.</p></article>
+<article class="feature"><div class="symbol">🌐</div><h3>Two languages</h3><p>Choose Spanish or English, both supported in the game.</p></article>
+</div></div></section>
+<section class="section" id="gallery"><div class="container"><div class="eyebrow">A LITTLE LOOK INSIDE</div><h2>Meet Kae in action.</h2><p class="lead">Real screenshots from the Windows game — yes, she's every bit as mischievous as she looks.</p><div class="gallery">
+<figure class="shot"><img loading="lazy" src="kae-media/kae-home.webp" alt="Kae welcomes players to her pink pixel-art home"><figcaption>Konkon! Welcome home.<small>A cozy place for our little troublemaker.</small></figcaption></figure>
+<figure class="shot"><img loading="lazy" src="kae-media/kae-sleep.webp" alt="Kae asleep with a Zzz bubble over her head"><figcaption>Even troublemakers need naps.<small>Zzz… Konkon…</small></figcaption></figure>
+<figure class="shot"><img loading="lazy" src="kae-media/kae-explore.webp" alt="Kae standing in another part of her home"><figcaption>Always on the move.<small>Explore her little world together.</small></figcaption></figure>
+<figure class="shot"><img loading="lazy" src="kae-media/kae-desktop.webp" alt="Kae running on the Windows desktop with her action menu open"><figcaption>Your desktop is her playground.<small>Move, sleep, follow the cursor and more.</small></figcaption></figure>
+</div></div></section>
+<section class="section" id="gameplay"><div class="container"><div class="eyebrow">REAL GAMEPLAY</div><h2>See the little fox run.</h2><p class="lead">Actual game footage from the latest development recording. No simulated features or mock gameplay.</p><div class="film-wrap"><video controls playsinline preload="metadata" poster="kae-media/kae-home.webp" aria-label="Kae Virtual Pet gameplay video"><source src="kae-media/kae-gameplay.mp4" type="video/mp4">Your browser cannot play this video. <a href="kae-media/kae-gameplay.mp4">Open gameplay footage</a>.</video><div class="film-bottom"><strong>▶ KAE VIRTUAL PET · GAMEPLAY</strong><span>Captured from the Windows build</span></div></div></div></section>
+<section class="section" id="download"><div class="container"><div class="eyebrow">READY FOR HER NEXT ADVENTURE?</div><h2>Let Kae move in.</h2><p class="lead">Kae Virtual Pet is complete. We're preparing the final Windows download package for the official website.</p><div class="download"><div><h3>Bring Kae to your desktop 🦊</h3><p>The direct Windows download will appear here once the final build is uploaded.</p><span class="platform">WINDOWS · ES / EN</span></div><a class="cta" href="#download" aria-disabled="true" onclick="return false" title="Download will be enabled after the final build is uploaded">DOWNLOAD — NOT LIVE YET</a></div></div></section>
 </main>
-<footer>© 2026 KAEN GAMES · Independent Game Studio</footer>
-</body>
-</html>
+<footer class="footer">© 2026 KAEN GAMES · Independent Game Studio · <a href="index.html#games">Explore all games ↗</a></footer>
+</body></html>

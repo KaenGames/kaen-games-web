@@ -26,6 +26,18 @@
 .kae-cinema-mode #kae-companion-v3{opacity:0!important;pointer-events:none!important;transition:opacity .3s ease}
 @media(max-width:800px){.kae-feature{padding:58px 18px 65px}.kae-feature-inner{grid-template-columns:1fr;gap:20px}.kae-feature h2{font-size:clamp(36px,9vw,52px)}.kae-feature p{margin:9px 0 0}.kae-video-card{border-radius:11px}.kae-video-footer{padding:10px 13px;flex-wrap:wrap}.kae-video-card video{max-height:none}}
 
+
+/* Red Sun at the Temple — música ambiental de la portada */
+.kaen-audio-player{position:fixed;left:max(12px,env(safe-area-inset-left));bottom:max(12px,env(safe-area-inset-bottom));z-index:99995;display:flex;align-items:center;gap:9px;max-width:calc(100vw - 24px);padding:9px 11px;background:#14080ff0;border:1px solid #b83b55;border-radius:13px;box-shadow:0 6px 26px #000a;backdrop-filter:blur(12px);font:500 12px/1.3 Arial,Helvetica,sans-serif;color:#f7dbe1}
+.kaen-audio-player button{background:#b52240;color:white;border:1px solid #ff6b83;border-radius:8px;min-width:116px;min-height:37px;padding:8px 10px;cursor:pointer;font:700 12px Arial,Helvetica,sans-serif;letter-spacing:.02em}
+.kaen-audio-player button:hover{background:#d73351}
+.kaen-audio-player button:focus-visible,.kaen-audio-player input:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.kaen-audio-player button:disabled{opacity:.65;cursor:default}
+.kaen-audio-player .kaen-audio-level{display:flex;align-items:center;gap:7px;white-space:nowrap}
+.kaen-audio-player label{font-size:11px;color:#e8bec8}
+.kaen-audio-player input[type=range]{width:79px;accent-color:#ff5b78;cursor:pointer}
+@media(max-width:480px){.kaen-audio-player{padding:7px 8px;gap:6px;border-radius:11px}.kaen-audio-player button{min-width:100px;padding:7px 8px;font-size:11px;min-height:35px}.kaen-audio-player label{display:none}.kaen-audio-player input[type=range]{width:63px}}
+
 </style>
 </head>
 <body>
@@ -75,5 +87,72 @@ const field=document.getElementById('embers');if(!window.matchMedia('(prefers-re
 
 <!-- Kae 3.0: mascota interactiva de KAEN GAMES -->
 <script src="kae/kae.js" defer></script>
+
+<!-- Música ambiental de la portada · activación manual para respetar los navegadores -->
+<div class="kaen-audio-player" role="group" aria-label="Música ambiental de KAEN GAMES">
+  <button id="kaen-music-toggle" type="button" aria-pressed="false" aria-label="Reproducir Red Sun at the Temple">♫ Escuchar</button>
+  <div class="kaen-audio-level">
+    <label for="kaen-music-volume">Volumen</label>
+    <input id="kaen-music-volume" type="range" min="0" max="100" value="20" aria-label="Volumen de música ambiental">
+  </div>
+</div>
+<audio id="kaen-bg-music" src="music/red-sun-at-the-temple.mp3" preload="none" loop></audio>
+<script>
+(function(){
+  'use strict';
+  var music=document.getElementById('kaen-bg-music');
+  var button=document.getElementById('kaen-music-toggle');
+  var slider=document.getElementById('kaen-music-volume');
+  var kaeVideo=document.getElementById('kae-intro-video');
+  var interruptedByVideo=false;
+  var unavailable=false;
+  if(!music||!button||!slider)return;
+  music.volume=.20;
+  function refresh(){
+    if(unavailable){button.textContent='♫ No disponible';button.setAttribute('aria-label','La música no está disponible');button.disabled=true;return;}
+    if(kaeVideo&&!kaeVideo.paused){
+      button.textContent='♫ Kae está hablando';
+      button.setAttribute('aria-label','Música ambiental pausada mientras suena el vídeo de Kae');
+      button.disabled=true;
+      return;
+    }
+    button.disabled=false;
+    var playing=!music.paused;
+    button.textContent=playing?'♫ Pausar':'♫ Escuchar';
+    button.setAttribute('aria-label',playing?'Pausar Red Sun at the Temple':'Reproducir Red Sun at the Temple');
+    button.setAttribute('aria-pressed',String(playing));
+  }
+  button.addEventListener('click',function(){
+    if(!music.paused){music.pause();interruptedByVideo=false;refresh();return;}
+    if(kaeVideo&&!kaeVideo.paused)return;
+    var result=music.play();
+    if(result&&typeof result.catch==='function')result.catch(function(){refresh();});
+  });
+  slider.addEventListener('input',function(){music.volume=Number(slider.value)/100;});
+  music.addEventListener('play',refresh);
+  music.addEventListener('pause',refresh);
+  music.addEventListener('error',function(){unavailable=true;refresh();});
+  if(kaeVideo){
+    kaeVideo.addEventListener('play',function(){
+      interruptedByVideo=!music.paused;
+      if(interruptedByVideo)music.pause();
+      refresh();
+    });
+    function afterKae(){
+      var shouldResume=interruptedByVideo;
+      interruptedByVideo=false;
+      refresh();
+      if(shouldResume&&music.paused){
+        var result=music.play();
+        if(result&&typeof result.catch==='function')result.catch(function(){refresh();});
+      }
+    }
+    kaeVideo.addEventListener('pause',afterKae);
+    kaeVideo.addEventListener('ended',afterKae);
+  }
+  refresh();
+})();
+</script>
+
 </body>
 </html>

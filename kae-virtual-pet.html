@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0c0508">
+<meta name="description" content="Kae Virtual Pet — a mischievous desktop companion from KAEN GAMES.">
+<title>Kae Virtual Pet — KAEN GAMES</title>
+<style>
+:root{color-scheme:dark;--red:#ff4059;--ink:#0c0508;--muted:#e3bfca}
+*{box-sizing:border-box}
+body{margin:0;min-height:100svh;background:radial-gradient(circle at 75% 25%,#75203755,transparent 50%),linear-gradient(145deg,#0b0509,#230a13 65%,#0b0509);color:white;font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid white;outline-offset:4px}
+header{border-bottom:1px solid #ffffff25;background:#090407c9;padding:18px max(22px,calc((100vw - 1120px)/2))}
+header a{font-weight:900;letter-spacing:.13em}header span{color:var(--red)}
+main{max-width:1120px;margin:auto;padding:65px 24px 95px}
+.back{color:#ff9cad;font-weight:bold;font-size:13px}
+.layout{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:42px;margin-top:45px}
+.kicker{color:#ff8399;letter-spacing:.2em;font-weight:800;font-size:12px}
+h1{font-size:clamp(46px,7vw,86px);line-height:.98;margin:20px 0}h1 span{color:var(--red)}
+p{color:var(--muted);line-height:1.8;font-size:17px}
+.pill{display:inline-block;border:1px solid #c83c52;border-radius:50px;color:#ff9aab;padding:9px 14px;font-size:11px;letter-spacing:.06em;font-weight:800;margin-top:18px}
+.stage{min-height:460px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:22px;border:1px solid #a9395077;border-radius:22px;background:radial-gradient(circle at 50% 65%,#9e224237,transparent 60%),#170a11;overflow:hidden;box-shadow:0 16px 50px #0006}
+.speech{max-width:88%;padding:19px 22px;border:2px solid #ff7991;border-radius:20px;background:#fff8fb;color:#4e0820;text-align:center;font-weight:900;font-size:clamp(17px,2.3vw,22px);line-height:1.45;box-shadow:0 8px 30px #ff415138;position:relative;animation:pop .5s .15s both}
+.speech::after{content:'';position:absolute;bottom:-13px;left:50%;width:20px;height:20px;background:#fff8fb;border-right:2px solid #ff7991;border-bottom:2px solid #ff7991;transform:translateX(-50%) rotate(45deg)}
+.kae{width:min(72%,310px);height:270px;object-fit:contain;filter:drop-shadow(0 12px 25px #000b);animation:bob 3.2s ease-in-out infinite}
+.note{font-size:12px;color:#c59dac;text-align:center;padding:0 15px}
+footer{text-align:center;color:#ab8792;font-size:12px;padding:25px;border-top:1px solid #ffffff20}
+@keyframes pop{from{opacity:0;transform:translateY(18px) scale(.9)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+@media(max-width:760px){main{padding:40px 20px 75px}.layout{grid-template-columns:1fr;gap:28px}.stage{min-height:410px}}
+@media(prefers-reduced-motion:reduce){.speech,.kae{animation:none}}
+</style>
+</head>
+<body>
+<header><a href="index.html">KAEN <span>GAMES</span></a></header>
+<main>
+<a class="back" href="index.html#games">← BACK TO OUR GAMES</a>
+<div class="layout">
+<div>
+<div class="kicker">MEET YOUR DESKTOP COMPANION</div>
+<h1>KAE <span>VIRTUAL PET</span></h1>
+<p>Meet Kae, the mischievous official mascot of KAEN GAMES. A playful virtual companion who loves attention, little pranks and making herself at home on your desktop.</p>
+<p>Say hello to Kae — but keep an eye on your computer. 🦊</p>
+<div class="pill">GAME COMPLETE · ORIGINAL KAEN GAMES PROJECT</div>
+</div>
+<div class="stage" aria-label="Kae greets visitors">
+<div class="speech" role="status" lang="es">¡Konkon! ¡Ahora te robaré el ordenador! &gt;:3</div>
+<img class="kae" src="kae/kae.png" alt="Kae, the official fox mascot of KAEN GAMES">
+<div class="note">Kae is plotting something…</div>
+</div>
+</div>
+</main>
+<footer>© 2026 KAEN GAMES · Independent Game Studio</footer>
+</body>
+</html>
